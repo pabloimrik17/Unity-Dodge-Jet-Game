@@ -17,7 +17,8 @@ public class PlayerController : MonoBehaviour {
  
         stiffBody.position = new Vector3(
             Mathf.Clamp(stiffBody.position.x, boundary.xMin, boundary.xMax),
-            Mathf.Clamp(stiffBody.position.y, boundary.yMin, boundary.yMax)
+            Mathf.Clamp(stiffBody.position.y, boundary.yMin, boundary.yMax),
+            stiffBody.position.z
         );
  
         stiffBody.rotation = Quaternion.Euler(0.0f, 0.0f, stiffBody.velocity.x * -tilt);
