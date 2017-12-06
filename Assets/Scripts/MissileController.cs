@@ -1,18 +1,21 @@
-﻿using System.Collections;
-using UnityEngine;
-
-public class MissileController : MonoBehaviour {
-
+﻿using UnityEngine;
+using System.Collections;
+ 
+public class MissileController : MonoBehaviour
+{
     public GameObject hazard;
  
     private float spawnWait = 1f;
  
-    void Start() {
+    void Start()
+    {
         StartCoroutine(SpawnWaves());
     }
  
-    IEnumerator SpawnWaves() {
-        while (true) {
+    IEnumerator SpawnWaves()
+    {
+        while (true)
+        {
             var xMinMax = Random.Range(-15f, 20f);
             Vector3 spawnPosition = new Vector3(xMinMax, 10f, 25f);
             Quaternion spawnRotation = Quaternion.Euler(new Vector3(90f,0f,0f));
